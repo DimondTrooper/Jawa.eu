@@ -251,3 +251,25 @@ footer {
     max-height: 300px; /* Maximale Höhe für Listing-Bilder */
     object-fit: cover; /* Bild wird zugeschnitten, um das Seitenverhältnis beizubehalten */
 }
+/* Allgemeine Stile für Bilder */
+img {
+    max-width: 100%; /* Bild darf nicht breiter als sein Container sein */
+    height: auto; /* Höhe wird proportional angepasst */
+    border-radius: 10px; /* Optional: Abgerundete Ecken */
+    display: block; /* Verhindert unerwünschte Abstände unter dem Bild */
+    margin: 0 auto; /* Bild zentrieren */
+}
+
+/* Spezifische Stile für Listing-Bilder */
+.pc-item img {
+    max-width: 300px; /* Maximale Breite für Listing-Bilder */
+    max-height: 300px; /* Maximale Höhe für Listing-Bilder */
+    object-fit: cover; /* Bild wird zugeschnitten, um das Seitenverhältnis beizubehalten */
+}
+
+/* Bildvorschau im Verkaufsformular */
+#image-preview img {
+    max-width: 150px; /* Kleinere Vorschau-Bilder */
+    max-height: 150px;
+    margin: 5px; /* Abstand zwischen den Bildern */
+}
