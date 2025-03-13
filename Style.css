@@ -245,7 +245,9 @@ footer {
 }
 
 .pc-item img {
-    max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+    max-width: 300px; /* Maximale Breite für Listing-Bilder */
+    max-height: 300px; /* Maximale Höhe für Listing-Bilder */
+    object-fit: cover; /* Bild wird zugeschnitten, um das Seitenverhältnis beizubehalten */
 }
