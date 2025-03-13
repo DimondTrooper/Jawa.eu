@@ -273,3 +273,46 @@ img {
     max-height: 150px;
     margin: 5px; /* Abstand zwischen den Bildern */
 }
+/* Grid-Container für die Listings */
+#pc-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
+    gap: 20px; /* Abstand zwischen den Listings */
+    margin-top: 20px;
+}
+
+/* Stile für jedes Listing */
+.pc-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Text zentrieren */
+}
+
+.pc-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stile für die Bilder in den Listings */
+.pc-item img {
+    max-width: 100%; /* Bild darf nicht breiter als sein Container sein */
+    height: auto; /* Höhe wird proportional angepasst */
+    border-radius: 10px; /* Abgerundete Ecken */
+    margin-bottom: 10px; /* Abstand unter dem Bild */
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    #pc-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 Spalten auf Tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #pc-list {
+        grid-template-columns: 1fr; /* 1 Spalte auf Mobilgeräten */
+    }
+}
