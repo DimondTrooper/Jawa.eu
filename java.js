@@ -159,3 +159,38 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCart();
     displayCartItems();
 });
+function displayListings() {
+    const pcList = document.getElementById('pc-list');
+    const listings = [
+        {
+            image: 'bild1.jpg',
+            name: 'Gaming PC',
+            price: 1200,
+            description: 'Ein leistungsstarker Gaming-PC mit RTX 3080.'
+        },
+        {
+            image: 'bild2.jpg',
+            name: 'Office PC',
+            price: 500,
+            description: 'Ideal für Büroarbeiten und Alltagsaufgaben.'
+        },
+        {
+            image: 'bild3.jpg',
+            name: 'Laptop',
+            price: 800,
+            description: 'Leicht und portabel, perfekt für unterwegs.'
+        }
+    ];
+
+    pcList.innerHTML = listings.map(listing => `
+        <div class="pc-item">
+            <img src="${listing.image}" alt="${listing.name}">
+            <h3>${listing.name}</h3>
+            <p><strong>Preis:</strong> €${listing.price}</p>
+            <p>${listing.description}</p>
+        </div>
+    `).join('');
+}
+
+// Listings anzeigen, wenn die Seite geladen wird
+document.addEventListener('DOMContentLoaded', displayListings);
